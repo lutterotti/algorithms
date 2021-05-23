@@ -1,0 +1,173 @@
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  background: #f5f5f5;
+}
+
+h6 {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  letter-spacing: 1.2px;
+  cursor: default;
+}
+
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  letter-spacing: 1.2px;
+  cursor: default;
+}
+
+.app {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  background: #f5f5f5;
+}
+
+.display-queue {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+.item-container {
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px;
+  align-items: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.display-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  height: 50px;
+  width: 50px;
+  background: #f3cece;
+  border: 1p solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+}
+
+.item-value {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.generate-queue-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid purple;
+  border-radius: 5px;
+  padding: 8px 12px;
+  height: 40px;
+  width: 120px
+}
+
+.select-algorithm {
+  height: 80px;
+  width: 100%;
+  padding: 0px 20px;
+  box-sizing: border-box;
+  background: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.05);
+}
+
+.reset-queue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  border: 1px solid rgb(182, 45, 187);
+  padding: 6px 8px;
+  margin-right: 50px;
+  background: rgb(182, 45, 187);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+
+  p {
+    cursor: pointer;
+  }
+}
+
+.reset-queue:hover {
+  background: rgb(132, 31, 136);
+  border: 1px solid rgb(132, 31, 136);
+  transition: all 0.3s ease;
+}
+
+.quick-queue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  border: 1px solid rgb(107, 35, 201);
+  padding: 6px 8px;
+  margin-right: 50px;
+  background: rgb(107, 35, 201);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+
+  p {
+    cursor: pointer;
+  }
+}
+
+.quick-queue:hover {
+  background: rgb(89, 28, 168);
+  border: 1px solid rgb(89, 28, 168);
+  transition: all 0.3s ease;
+}
+
+.merge-queue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  border: 1px solid rgb(59, 12, 190);
+  padding: 6px 8px;
+  margin-right: 50px;
+  background: rgb(59, 12, 190);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+
+  p {
+    cursor: pointer;
+  }
+}
+
+.merge-queue:hover {
+  background: rgb(48, 10, 153);
+  border: 1px solid rgb(48, 10, 153);
+  transition: all 0.3s ease;
+}
