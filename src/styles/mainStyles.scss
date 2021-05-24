@@ -26,6 +26,69 @@ p {
   cursor: default;
 }
 
+input:focus {
+  outline: none;
+}
+
+.queue-options {
+  margin-left: 50px;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  align-items: flex-start;
+  margin-right: 20px;
+}
+
+.input-label {
+  font-size: 12px;
+  margin-left: 3px;
+  margin-bottom: 1px;
+  color: black;
+  letter-spacing: 1.2px;
+}
+
+.option-input {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 3px 8px;
+  height: 30px;
+  letter-spacing: 1.2px;
+}
+
+.update-queue-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  border: 1px solid rgb(32, 211, 166);
+  padding: 8px 10px;
+  background: rgb(32, 211, 166);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+
+  p {
+    cursor: pointer;
+  }
+}
+
+.update-queue-options:hover {
+  background: rgb(28, 189, 149);
+  transition: all 0.3s ease;
+}
+
 .app {
   display: flex;
   justify-content: flex-start;
