@@ -32,8 +32,8 @@ input:focus {
 
 .queue-options {
   margin-left: 50px;
-  height: 100px;
   width: 100%;
+  padding: 20px 0px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -42,7 +42,6 @@ input:focus {
 .input-field {
   display: flex;
   flex-direction: column;
-  width: 120px;
   justify-content: flex-start;
   box-sizing: border-box;
   align-items: flex-start;
@@ -58,11 +57,12 @@ input:focus {
 }
 
 .option-input {
-  width: 100%;
+  width: 120px;
   border-radius: 5px;
   border: 1px solid #ddd;
   padding: 3px 8px;
   height: 30px;
+  margin-right: 20px;
   letter-spacing: 1.2px;
 }
 
@@ -73,6 +73,7 @@ input:focus {
   color: #fff;
   cursor: pointer;
   font-weight: 500;
+  height: 25px;
   border: 1px solid rgb(32, 211, 166);
   padding: 8px 10px;
   background: rgb(32, 211, 166);

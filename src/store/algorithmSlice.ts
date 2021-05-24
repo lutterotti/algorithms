@@ -63,15 +63,22 @@ export const AlgorithmSlice = createSlice({
     },
     updateQueueOptions: (state: AlgorithmState, action: PayloadAction<QueueOptions>) => {
       const { length_of_queue, min_value, max_value } = action.payload;
-      const default_length_of_queue = state.options.length_of_queue;
-      const default_min_value = state.options.min_value;
-      const default_max_value = state.options.max_value;
+      const updated_length_of_queue = length_of_queue ? length_of_queue : state.options.length_of_queue;
+      const updated_min_value = min_value ? min_value : state.options.min_value;
+      const updated_max_value = max_value ? max_value : state.options.max_value;
 
-      return {...state, options: {
-        length_of_queue: length_of_queue ? length_of_queue : default_length_of_queue,
-        min_value: min_value ? min_value : default_min_value,
-        max_value: max_value ? max_value : default_max_value
-      }}
+      console.log({ length_of_queue, min_value, max_value });
+      const new_queue: number[] = generateQueue(updated_length_of_queue, updated_min_value, updated_max_value);
+
+      return {...state,
+        ...state,
+        queue: new_queue,
+        options: {
+          length_of_queue: updated_length_of_queue,
+          min_value: updated_min_value,
+          max_value: updated_max_value
+        }
+    }
     }
   },
 });
