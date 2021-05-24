@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState, AppThunk, store } from './store';
-import { generateQueue, quickSortB } from '../utils/util-functions';
+import { generateQueue, mergeSort, quickSort } from '../utils/util-functions';
 import { cloneDeep, isNil } from 'lodash';
 
 
@@ -38,14 +38,20 @@ export const AlgorithmSlice = createSlice({
       return {...state, queue: new_queue}
     },
     quickSortQueue: (state: AlgorithmState, action: PayloadAction<number[]>) => {
-      const clone = cloneDeep(action.payload);
-      const sorted_queue: number[] = quickSortB(clone, 0, clone.length).filter((value: number) => !isNil(value));
+      const cloned_queue = cloneDeep(action.payload);
+      const sorted_queue: number[] = quickSort(cloned_queue, 0, cloned_queue.length).filter((value: number) => !isNil(value));
       return {...state, queue: sorted_queue}
+    },
+    mergeSortQueue: (state: AlgorithmState, action: PayloadAction<number[]>) => {
+      const cloned_queue = cloneDeep(action.payload);
+      const sorted_queue = mergeSort(cloned_queue);
+
+      return {...state, queue: sorted_queue};
     }
   },
 });
 
-export const { generateSortQueue, quickSortQueue } = AlgorithmSlice.actions;
+export const { generateSortQueue, quickSortQueue, mergeSortQueue } = AlgorithmSlice.actions;
 
 export const getQueue = (state: RootState) => state.queue.queue;
 
